@@ -1,18 +1,19 @@
 <! DOCTYPE html>
 <html>
 <head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-body{
-  background-image: url("https://i1.wp.com/vibrez-rugby.com/wp-content/uploads/2018/12/logo-uso.jpg?fit=720%2C720&ssl=1");
-  background-size: 10%
-}
+    body{
+      background-image: url("https://i1.wp.com/vibrez-rugby.com/wp-content/uploads/2018/12/logo-uso.jpg?fit=720%2C720&ssl=1");
+      background-size: 10%
+    } 
 
-section>div:hover{
-  background-color: red;
-  color: black;
-}
+    section>div:hover{
+      background-color: red;
+      color: black;
+    }
 
 .popup{
   height: 725px;
@@ -41,5 +42,88 @@ h1{
 </style>
 </head>
 <body>
+  <!-- popup cookie -->
+<div class="w-full bg-white rounded-md popup top-0 mb">
+  <p class="text-center p-4">
+    Veuillez accepter ces cookies pour continuer sur ce site
+    <br />
+    <a class="underline italic" href="#debut">Cliquez ici pour accepter</a>
+  </p>
+  <img class="transform hover:rotate-180 mx-auto rounded-full my-4" src="https://assets.afcdn.com/recipe/20201110/115460_w768h583c1cx1762cy1175cxb3525cyb2350.webp">
+</div>
+
+<!-- "vrai" blog -->
+<div class="relative">
+
+  <!-- tag debut pour la popup -->
+  <div class="bg-black w-3/5 mx-auto responsivewidth relative" id="debut">
+
+    <!-- header -->
+    <div class=" top-0 sticky z-10  border-2 p-4 mt-0  rounded h-24 bg-black mt-px">
+
+      <h1 class="text-center text-red-500  text-3xl">
+        Union Sportive Oyonnax (USO Rugby)
+      </h1>
+    </div>
+
+    <!-- section pour modifier toutes les div sauf le header en css -->
+    <section>
+
+      <!-- histoire -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded  mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">L'Histoire du club</h2>
+        <img class="transform hover:rotate-90 mx-auto rounded-full my-4" src="data:image/png;base64,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">
+        <p class="my-4"> Oyonnax Rugby (connu jusqu'au 31 mai 2018 en tant qu'Union sportive Oyonnax rugby) est un club français de rugby à XV fondé en 1909, basé à Oyonnax dans le département de l'Ain.</p>
+        <a class="italic underline" target="blank_" href="https://fr.wikipedia.org/wiki/Oyonnax_rugby">En savoir plus sur l'histoire du club</a>
+      </div>
+
+      <!-- stade -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded  mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">Le Stade</h2>
+        <img class="transform hover:rotate-180 mx-auto rounded-full my-4" src="https://surlatouche.fr/wp-content/uploads/2020/05/Stade-Charles-Mathon-scaled-e1589667736562.jpg">
+        <p class="my-4">Le stade Charles-Mathon est un stade de rugby à XV situé à Oyonnax, dans l'Ain. C'est le stade de l'Union sportive Oyonnax rugby qui évolue en Top 14 depuis 2013. Depuis l'intersaison 2015, la pelouse est synthétique ce qui en fait le premier stade du Top 14 à être doté d'une telle surface.</p>
+        <a class="italic underline" target="blank_" href="https://www.google.fr/maps/place/Stade+Charles-Mathon/@46.2541883,5.6413717,14.14z/data=!4m5!3m4!1s0x478cbd73b782af09:0x3380c059e6afa0b7!8m2!3d46.2537388!4d5.644089">Localisation du Stade Charles Mathon</a>
+      </div>
+
+      <!-- personalités -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded  mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">Personnalités marquantes</h2>
+        <img class="transform hover:rotate-180 mx-auto rounded-full my-4" src="https://images.beinsports.com/w9TXZvcFxECBxpxzHVby-EMaT20=/full-fit-in/1000x0/christophe-urios-et-son-club-ont-peut-etre-condamne-sa-future-equipe-samedi_scan_1199398_0.jpg">
+        <p class="my-4"> Christophe Urios, né le 20 décembre 1965 à Montpellier (Hérault), est un joueur et entraineur français de rugby à XV qui a évolué au poste de talonneur. C'est une personne emblematique de l'USO Rugby, qu'il a emmené de la troisème division à un quart de finale de championnat de France.</p>
+        <a class="italic underline" target="blank_" href="https://fr.wikipedia.org/wiki/Christophe_Urios">En savoir plus sur Christophe Urios</a>
+      </div>
+
+      <!-- moments marquants -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">Moments marquants</h2>
+        <img class="transform hover:rotate-180 mx-auto rounded-full my-4" src="http://img.over-blog-kiwi.com/1/04/67/49/20150530/ob_3070e5_to.jpg">
+        <p class="my-4"> Lors de la saison 2014-2015, Oyonnax accède, à la surprise générale, aux barrages de Top14 (1/4 de finale), et met l'ogre toulousain en grande difficulté, chez lui.</p>
+        <iframe class="cacherSurTel" src="https://www.youtube.com/embed/MIQGJ3m9fyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- situation actuelle /!\ ne pas ouvrir url très longue -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">Situation Actuelle</h2>
+        <img class="transform hover:rotate-90 mx-auto rounded-full my-4" src="data:image/jpeg;base64,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">
+        <p class="my-4">Oyonnax est actuellement en ProD2, la deuxième division du rugby francais.</p>
+        <a class="italic underline" target="blank_" href="https://www.rugbyrama.fr/rugby/pro-d2/standing.shtml">classement ProD2 </a>
+      </div>
+
+      <!-- liens -->
+      <div class=" shadow border-2 p-4 m-2 relative rounded mx-auto bg-black text-red-500">
+        <h2 class="text-center text-xl">Liens Utiles</h2>
+        <div>
+          <a class="inline-block bg-red-500 text-black text-lg mt-4 rounded px-3 text-bold hover:text-red-500 hover:bg-black" href="https://oyonnaxrugby.com" />Site web</a>
+          <br />
+          <a class="inline-block bg-red-500 text-black text-lg mt-4 rounded px-3 text-bold hover:text-red-500 hover:bg-black" href="https://www.boutique-oyonnax-rugby.com/" />Boutique</a>
+          <br />
+          <a class="inline-block bg-red-500 text-black text-lg mt-4 rounded px-3 text-bold hover:text-red-500 hover:bg-black" href="https://billetterie.oyonnaxrugby.com/fr/billetterie" />Billeterie</a>
+          <br />
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
 </body>
 </html>
